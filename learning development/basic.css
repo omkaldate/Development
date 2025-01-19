@@ -1,0 +1,30 @@
+.parent{
+    background-color: aqua;
+    text-align: center;
+    border-style: double;
+    border-color: black;
+    width: 500px;
+    
+}
+
+.child{
+    padding: 20px;
+    border: dotted;
+    border-color: rgb(236, 106, 206);
+}
+
+#one{
+    background-color: rgb(228, 66, 21) ;
+}
+
+#two{
+    background-color: rgb(232, 235, 231);
+}
+
+#three{
+    background-color: rgb(24, 217, 59);
+}
+
+#four{
+    background-color: rgb(176, 223, 23);
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+        <!-- check box -->
+       <div>
+            <label for="age"> are you 18+</label>
+            <input type="checkbox" id="age" name="age" checked>
+            <br>
+       </div>
+       <hr>
+       <!-- radio buttions -->
+        <div>
+            <label for="for"> Fortuner</label>
+            <input type="radio" id="for" name="car" value="fortuner">
+
+            <label for="tha"> Thar</label>
+            <input type="radio" id="tha" name="car" value="thar">
+
+            <label for="ver"> verna</label>
+            <input type="radio" id="ver" name="car" value="verna">
+        </div>
+        <hr>
+         <!-- select options  // dropdiwns -->
+        <div>
+            Select A Car
+            <select name="car" id="cr">
+                <option value="for" selected>Frotuner</option>
+                <option value="tha">Thar</option>
+                <option value="ver">Verna</option>
+            </select>
+        </div>
+        <hr>
+        <!-- range bar -->
+        <div>
+            <label for="price"> Yout Budget</label>
+            <input type="range" id="price" name="money" min="1" max="100" step="10" value="30">
+        </div>
+        <hr>
+        <!-- text area -->
+        <div>
+            <label for="req">which function do you want in car</label>
+            <textarea name="need" id="req" rows="5" cols="100"></textarea>
+        </div>
+
+       <button type="submit">Submit</button>
+
+    </form>
+</body>
+</html>

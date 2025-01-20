@@ -1,4 +1,4 @@
-console.log("this is js file");
+//console.log("this is js file");
 
 showNotes();
 
@@ -45,7 +45,7 @@ function showNotes() {
 }
 
 function deleteNote(ind) {
-    console.log(`deleting work No ${ind}`);
+    //console.log(`deleting work No ${ind}`);
     let notes = localStorage.getItem('notes');
 
     if (notes == null) arr = [];

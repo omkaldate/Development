@@ -117,9 +117,50 @@
 // });
 
 
-let heading = document.getElementById('heading');
-heading.addEventListener('click', fun);
+// let heading = document.getElementById('heading');
+// heading.addEventListener('click', fun);
 
-function fun(e){
-console.log(e.target);
+// function fun(e){
+// console.log(e.target);
+// }
+
+
+// console.log(Date());
+
+// // create div and inject after the heading
+// let divEle = document.createElement('div');
+// let text = document.createTextNode('this is my element...  click here to edint');
+// divEle.setAttribute('id', 'elem');
+// divEle.setAttribute('style' , 'border: 2px solid black; width:154px; margin:34px; padding:23px');
+
+// let container = document.querySelector('parent');
+// let first = document.getElementById('one');
+
+// divEle.appendChild(text);
+// //container.insertBefore(divEle, first);
+
+// console.log(divEle, text, first);
+
+
+// let car = {
+//     name : "BMW",
+//     speed : 400,
+//     engine : "v8",
+
+//     run : function(){
+//         console.log("car is running");
+//     }
+// }
+
+//console.log(car);
+
+function Car(name, speed){
+    this.name = name;
+    this.speed = speed;
+    this.run = function(){
+        console.log(`${name} is running`);
+    }
 }
+
+obj = new Car("BMW",400);
+console.log(obj);

@@ -5,15 +5,23 @@ showNotes();
 let addBtn = document.getElementById('addBtn');
 addBtn.addEventListener('click', function (el) {
 
-    let text = document.getElementById('addTxt');
-    let notes = localStorage.getItem('notes');
+    let Addtitle = document.getElementById('addTitle');
+    let Addtext = document.getElementById('addTxt');
 
+    let notes = localStorage.getItem('notes');
     if (notes == null) arr = [];
     else arr = JSON.parse(notes);
 
-    arr.push(text.value);
+    let Obj = {
+        title : Addtitle.value,
+        text : Addtext.value
+    };
+
+
+    arr.push(Obj);
     //console.log(text.key, text.value);
     localStorage.setItem("notes", JSON.stringify(arr));
+    title.value ="";
     text.value = "";
     console.log("work added sucessfully");
     showNotes();
@@ -29,8 +37,8 @@ function showNotes() {
     arr.forEach(function (ele, ind) {
         html += `<div class="my-2 mx-3 card" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title">"Work No ${ind + 1}"</h5>
-                        <p class="card-text">${ele}</p>
+                        <h5 class="card-title"> ${ele.title}</h5>
+                        <p class="card-text">${ele.text}</p>
                          <button id="${ind}" onclick= "deleteNote(this.id)" class="btn btn-primary">Delete Work</button>
                      </div>
                  </div>`;

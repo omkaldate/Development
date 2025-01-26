@@ -58,7 +58,7 @@
 // let name = prompt("senter your name men");
 // console.log(name);
 
- 
+
 
 // let ele = document.getElementById('one');
 // console.log(ele);
@@ -154,13 +154,86 @@
 
 //console.log(car);
 
-function Car(name, speed){
-    this.name = name;
-    this.speed = speed;
-    this.run = function(){
-        console.log(`${name} is running`);
+// function Car(name, speed){
+//     this.name = name;
+//     this.speed = speed;
+//     this.run = function(){
+//         console.log(`${name} is running`);
+//     }
+// }
+
+// obj = new Car("BMW",400);
+// console.log(obj);
+
+
+// inheritance using prototype /////////////////////////////////////////////////
+
+// function Employee(name,salary,age){
+//     this.name = name;
+//     this.salary = salary;
+//     this.age = age;
+// }
+
+// Employee.prototype.slogan = function(){
+//     return `you are the best and we are making you bestest`;
+// }
+// let obj = new Employee("om",30000,22);
+// console.log(obj);
+// console.log(obj.slogan);
+
+// function Programmer(name,salary,age,language){
+//     Employee.call(this,name,salary,age);
+//     this.language = language;
+// }
+
+// Programmer.prototype = Object.create(Employee.prototype);
+// Programmer.prototype.constructor = Programmer;
+// let obj2 = new Programmer("omyaa",25,232456,"java");
+// console.log(obj2);
+// console.log(obj2.slogan);
+
+/////////////////////////////////////////////////////////////
+
+
+
+class Employee {
+    constructor(name, age, salery) {
+        this.name = name;
+        this.age = age;
+        this.salery = salery;
+    }
+
+    slogan() {
+        return `i am ${this.name} and i am employee of this company`;
+    }
+
+    static add(a, b) {
+        return a + b;
     }
 }
 
-obj = new Car("BMW",400);
-console.log(obj);
+// obj = new Employee("om", 23, 54321);
+// console.log(obj);
+// console.log(obj.slogan());
+// console.log(Employee.add(5,6));
+
+class Programmer extends Employee {
+    constructor(name, age, salery, language) {
+        super(name, age, salery);
+        this.language = language;
+    }
+
+    favouriteLanguage() {
+        if (this.language = "java") return "java";
+        else return "java script";
+    }
+
+    static multiply(a, b) {
+        return a * b;
+    }
+}
+
+obj2 = new Programmer("ommmm", 33, 543, "java");
+console.log(obj2);
+console.log(obj2.favouriteLanguage());
+console.log(Programmer.multiply(5,5));

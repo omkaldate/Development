@@ -1,0 +1,1 @@
+tis is the text file or folder in the AJAX folder

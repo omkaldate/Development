@@ -87,7 +87,7 @@
         </fieldset>
 
         <!-- parameter box - this will hide when clicking on json type -->
-        <div class="parameterBox my-3">
+        <div class ="parameterBox my-3" id="parameterBox">
             <div class="form row">
                 <legend class="col-form-label col-sm-1 pt-0"><b>parameter</b></legend>
                 <div class="col-md-4">
@@ -96,24 +96,36 @@
                 <div class="col-md-4">
                     <input type="text" class="form-control" id="parameterValue1" placeholder="Enter Parameter 1 Value">
                 </div>
-                <button class=" col-sm-1 btn btn-primary">+</button>
+                <button id="addParams" class=" col-sm-1 btn btn-primary">+</button>
             </div>
+            <div id="params"></div>
         </div>
 
         <!-- JSON request box - this will hideon clicking parameters option in content type -->
         <div class="my-3" id="requestJsonBox">
             <div class="mb-3 row ">
                 <label for="requestJsonText" class="col-sm-1 col-form-label"><b>Enter Request JSON</b></label>
-                <div class="col-sm-5">
+                <div class="col-sm-8">
                     <textarea class="form-control" id="requestJsonText" rows="3"></textarea>
                 </div>
             </div>
         </div>
 
         <!-- submit button which will triger fetch API -->
-        <div class="mb-3 row my-4">
+        <div class="mb-3 row my-5">
             <div class="col-sm-5">
                 <button id="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+        <hr>
+        <br>
+
+        <div class="my-3">
+            <div class="mb-3 row ">
+                <label for="responseJsonBox" class="col-sm-1 col-form-label"><b>response</b></label>
+                <div class="col-sm-8">
+                    <textarea class="form-control" id="responseJsonBox" rows="3">your response wil appear here</textarea>
+                </div>
             </div>
         </div>
     </div>
